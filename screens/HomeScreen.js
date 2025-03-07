@@ -32,9 +32,9 @@ export default function HomeScreen() {
         <Text style={styles.logo}>🎨 Lucky Colors</Text>
       </View>
       <View style={styles.mainContent}>
-        <Text style={styles.dateText}>วันจันทร์ 3 มีนาคม 2025</Text>
+        <Text style={styles.dateText}>Monday, 3 March 2025</Text>
         <View style={styles.weekContainer}>
-          {["อา", "จ", "อ", "พ", "พฤ", "ศ", "ส"].map((day, index) => (
+          {["SUN", "MON", "THES", "WED", "THU", "FRI", "SAT"].map((day, index) => (
             <View key={index} style={styles.dayBox}>
               <Text style={styles.dayText}>{day}</Text>
               <Text style={styles.dayText}>{index + 3}</Text>
@@ -46,6 +46,7 @@ export default function HomeScreen() {
   );
 }
 
+//Alert warning Blackground
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#fff" },
   modalContainer: {
@@ -54,50 +55,75 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "rgba(0,0,0,0.5)",
   },
+
+  //Alert warning Box
   modalBox: {
     width: 300,
-    backgroundColor: "white",
+    backgroundColor: "#EEF1FF",
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
   },
   warningText: { fontSize: 18, marginBottom: 10 },
   closeButton: { position: "absolute", top: 10, right: 10 },
+
+  //second Header Bar
   headerBar: {
     position: "absolute",
     top: 0,
     width: "100%",
-    height: 100,
-    backgroundColor: "#6200ea",
+    height: 200,
+    backgroundColor: "#eee9f8",
     justifyContent: "center",
-    paddingLeft: 20,
+    paddingHorizontal: 20,
+    borderBottomLeftRadius: 35,
+    borderBottomRightRadius: 35,
   },
+
+  //Lucky Colors Text-bandner
   logo: {
-    color: "white",
+    color: "#1F2940",
     fontSize: 24,
     fontWeight: "bold",
     position: "absolute",
-    bottom: 10,
+    top: 20,
     left: 10,
   },
+
   mainContent: {
     flex: 1,
-    marginTop: 120,
     alignItems: "flex-start",
-    paddingLeft: 20,
+    paddingHorizontal: 20,
+    marginTop: 75,
+    
   },
-  dateText: { fontSize: 18, fontWeight: "bold" },
+
+  dateText: {
+    fontSize: 16,
+    fontWeight: "normal",
+    color: "#1F2940",
+  },
+
   weekContainer: {
     flexDirection: "row",
     justifyContent: "space-around",
     width: "100%",
     paddingVertical: 10,
   },
+
   dayBox: {
-    padding: 10,
-    backgroundColor: "#eee",
+    width: 48,
+    height: 60,  
+    backgroundColor: "#5B3E90",
     borderRadius: 5,
     alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 15,
   },
-  dayText: { fontSize: 16 },
+
+  dayText: { 
+  fontSize: 13,
+  fontWeight: "600",
+  color: "white",
+  },
 });

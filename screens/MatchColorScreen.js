@@ -13,28 +13,28 @@ import { Ionicons } from "@expo/vector-icons";
 export default function MatchColorScreen() {
   const looks = [
     {
-      title: "Look 1",
-      colors: ["#FF5733", "#FFC300", "#C70039"],
-      names: ["แดง", "ส้ม", "เขียว"],
-      descriptions: ["ช่วยเสริมด้านความมั่นใจและพลังงานบวก"],
+      title: "Look 1: Confident",
+      colors: ["#FF0000", "#FFA500", "#2de32d"],
+      names: ["Red", "Orange", "Green"],
+      descriptions: ["Help enhance confidence and positive energy."],
     },
     {
-      title: "Look 2",
+      title: "Look 2: Health",
       colors: ["#33FF57", "#28A745", "#85C1E9"],
-      names: ["เขียวอ่อน", "เขียวเข้ม", "ฟ้า"],
-      descriptions: ["ช่วยเสริมด้านสุขภาพและความสงบในจิตใจ"],
+      names: ["Light Green", "Deep Green", "Sky Blue"],
+      descriptions: ["Help enhance health and peace of mind."],
     },
     {
-      title: "Look 3",
-      colors: ["#3357FF", "#6C5CE7", "#A29BFE"],
-      names: ["น้ำเงิน", "ม่วงเข้ม", "ม่วงอ่อน"],
-      descriptions: ["ช่วยเสริมด้านความคิดสร้างสรรค์และแรงบันดาลใจ"],
+      title: "Look 3: Creative",
+      colors: ["#3357FF", "#ac2bf9", "#d48cff"],
+      names: ["Blue", "Deep Purple", "Light Purple"],
+      descriptions: ["Help enhance creativity and inspiration."],
     },
     {
-      title: "Look 4",
-      colors: ["#FF33F6", "#E91E63", "#F06292"],
-      names: ["ชมพูสด", "ชมพูเข้ม", "ชมพูอ่อน"],
-      descriptions: ["ช่วยเสริมด้านความรักและเสน่ห์ส่วนตัว"],
+      title: "Look 4: Charm",
+      colors: ["#f92b70", "#aa2a54", "#ff92b6"],
+      names: ["Pink", "Deep Pink", "Light Pink"],
+      descriptions: ["Help enhance love and personal charm."],
     },
   ];
 
@@ -44,7 +44,7 @@ export default function MatchColorScreen() {
         style={styles.mainContent}
         showsVerticalScrollIndicator={false}
       >
-        <Text style={styles.dateText}>วันจันทร์ 3 มีนาคม 2025</Text>
+        <Text style={styles.dateText}>Monday, 3 March 2025</Text>
         <View style={styles.colorContainer}>
           {looks.map((look, index) => (
             <View key={index} style={styles.colorSection}>
@@ -74,20 +74,22 @@ export default function MatchColorScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#fff" },
-  mainContent: { marginTop: 140, padding: 20, backgroundColor: "#fff" },
-  dateText: { fontSize: 20, fontWeight: "bold" },
+  mainContent: { padding: 20, backgroundColor: "#fff" },
+  dateText: { fontSize: 16, fontWeight: "medium", color: "#1F2940" },
   colorContainer: { marginTop: 20 },
   colorSection: { marginBottom: 20 },
   sectionTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
+  
   colorBoxContainer: {
     flexDirection: "row",
     justifyContent: "flex-start",
     marginBottom: 5,
-    backgroundColor: "#F0F0F0",
+    backgroundColor: "#eee9f8",
     borderRadius: 10,
     padding: 10,
     width: "100%",
   },
+  
   colorBox: {
     flex: 1,
     height: 60,

@@ -83,18 +83,20 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     width: "100%",
-    height: 120,
+    height: 150,
     backgroundColor: "#6200ea",
     justifyContent: "center",
     alignItems: "center",
   },
   backButton: { position: "absolute", left: 10, top: 50, padding: 10 },
+
   logo: {
     color: "white",
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 50,
+    
   },
   mainContent: { marginTop: 140, padding: 20, backgroundColor: "#fff" },
   dateText: { fontSize: 20, fontWeight: "bold" },
