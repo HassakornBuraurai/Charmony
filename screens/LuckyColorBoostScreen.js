@@ -31,42 +31,48 @@ export default function LuckyColorBoostScreen() {
         style={styles.mainContent}
         showsVerticalScrollIndicator={false}
       >
-        <Text style={styles.dateText}>วันจันทร์ 3 มีนาคม 2025</Text>
+        <Text style={styles.dateText}>Monday, 3 March 2025</Text>
         <View style={styles.colorContainer}>
           {[
             {
               title: "Career",
               icon: "briefcase",
-              color: "blue",
+              color: "#3357FF",
+              name: "Blue",
               description:
-                "สีน้ำเงินช่วยเสริมความมั่นใจและความน่าเชื่อถือในหน้าที่การงาน",
+                "Blue enhances confidence and credibility in the workplace.",
             },
             {
               title: "Finance & Wealth",
               icon: "cash",
-              color: "green",
-              description: "สีเขียวช่วยเสริมโชคลาภและความมั่นคงทางการเงิน",
+              color: "#2de32d",
+              name: "Green",
+              description: "Green enhances fortune and financial stability.",
             },
             {
               title: "Luck & Fortune",
               icon: "star",
-              color: "yellow",
-              description: "สีเหลืองช่วยเสริมโชคดีและโอกาสในชีวิต",
+              color: "#ffe200",
+              name: "Yellow",
+              description: "Yellow enhances luck and opportunities in life.",
             },
             {
               title: "Charm & Relationships",
               icon: "heart",
-              color: "pink",
-              description: "สีชมพูช่วยเสริมเสน่ห์และความสัมพันธ์ที่ดี",
+              color: "#f92b70",
+              name: "Pink",
+              description: "Pink enhances charm and positive relationships.",
             },
           ].map((item, index) => (
             <View key={index} style={styles.colorSection}>
               <View style={styles.colorHeader}>
-                <Ionicons name={item.icon} size={24} color="black" />
+                <Ionicons name={item.icon} size={24} color="#1F2940" />
                 <Text style={styles.sectionTitle}>{item.title}</Text>
               </View>
-              <View style={[styles.colorBox, { backgroundColor: item.color }]}>
-                <Text style={styles.colorText}>{item.color}</Text>
+              <View style={styles.colorBoxContainer}>
+                <View style={[styles.colorBox, { backgroundColor: item.color }]}>
+                  <Text style={styles.colorText}>{item.name}</Text>
+                </View>
               </View>
               <Text style={styles.description}>{item.description}</Text>
             </View>
@@ -83,35 +89,47 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     width: "100%",
-    height: 150,
-    backgroundColor: "#6200ea",
+    height: 100,
+    backgroundColor: "#5B3E90",
     justifyContent: "center",
     alignItems: "center",
   },
-  backButton: { position: "absolute", left: 10, top: 50, padding: 10 },
+  backButton: { position: "absolute", left: 10, justifyContent: "center", padding: 10 },
 
   logo: {
     color: "white",
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
-    marginTop: 50,
+    justifyContent: "center",
+
     
   },
-  mainContent: { marginTop: 140, padding: 20, backgroundColor: "#fff" },
-  dateText: { fontSize: 20, fontWeight: "bold" },
+  mainContent: { marginTop: 100, padding: 20, backgroundColor: "#fff" },
+  dateText: { fontSize: 15, fontWeight:  "medium", color: "#1F2940"},
   colorContainer: { marginTop: 20 },
   colorSection: { marginBottom: 20 },
   colorHeader: { flexDirection: "row", alignItems: "center", marginBottom: 10 },
-  sectionTitle: { fontSize: 18, fontWeight: "bold", marginLeft: 10 },
+
+  sectionTitle: { fontSize: 18, fontWeight: "bold", marginLeft: 10, color: "#1F2940"},
+  
+  colorBoxContainer: {
+    marginBottom: 5,
+    backgroundColor: "#eee9f8",
+    borderRadius: 10,
+    padding: 10,
+    width: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
   colorBox: {
     width: "100%",
-    height: 50,
+    height: 60,
     justifyContent: "center",
     paddingLeft: 10,
     borderRadius: 8,
-    marginBottom: 5,
   },
-  colorText: { color: "white", fontWeight: "bold" },
-  description: { fontSize: 14, color: "gray" },
+  colorText: { color: "white", fontWeight: "bold", paddingLeft: 10 },
+  description: { fontSize: 14, color: "#5B3E90"},
 });
