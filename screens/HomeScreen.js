@@ -12,13 +12,15 @@ import { Ionicons } from "@expo/vector-icons";
 
 export default function HomeScreen() {
   const [warningVisible, setWarningVisible] = useState(true);
-
+  
   return (
     <SafeAreaView style={styles.container}>
       <Modal visible={warningVisible} transparent animationType="slide">
+        
         <View style={styles.modalContainer}>
           <View style={styles.modalBox}>
-            <Text style={styles.warningText}>คำเตือน: นี่คือแอพสีมงคล</Text>
+            <Text style={styles.warningText}>Warning</Text>
+            <Text style={styles.warningTextDescription}>This is an auspicious color app. The colors and their meanings are intended to enhance various aspects of your life based on traditional beliefs."</Text>
             <TouchableOpacity
               style={styles.closeButton}
               onPress={() => setWarningVisible(false)}
@@ -27,6 +29,7 @@ export default function HomeScreen() {
             </TouchableOpacity>
           </View>
         </View>
+
       </Modal>
       <View style={styles.headerBar}>
         <Text style={styles.logo}>🎨 Lucky Colors</Text>
@@ -41,6 +44,7 @@ export default function HomeScreen() {
             </View>
           ))}
         </View>
+
       </View>
     </SafeAreaView>
   );
@@ -59,12 +63,13 @@ const styles = StyleSheet.create({
   //Alert warning Box
   modalBox: {
     width: 300,
-    backgroundColor: "#EEF1FF",
+    backgroundColor: "#eee9f8",
     padding: 20,
     borderRadius: 10,
     alignItems: "center",
   },
-  warningText: { fontSize: 18, marginBottom: 10 },
+  warningText: { fontSize: 18, marginBottom: 10 , fontWeight: "bold", color: "red"},
+  warningTextDescription: { textAlign: "center", color: "#1F2940"},
   closeButton: { position: "absolute", top: 10, right: 10 },
 
   //second Header Bar

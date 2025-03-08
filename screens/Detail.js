@@ -16,29 +16,29 @@ export default function DetailColorScreen() {
 
   const colorsOfTheDay = [
     {
-      color: "#FF5733",
-      name: "แดง",
-      description: "ช่วยเสริมด้านความมั่นใจและพลังงานบวก",
+      color: "#FF0000",
+      name: "Red",
+      description: "Helps enhance confidence and positive energy.",
     },
     {
-      color: "#FFC300",
-      name: "ส้ม",
-      description: "ช่วยเสริมด้านความคิดสร้างสรรค์และโชคลาภ",
+      color: "#FFA500",
+      name: "Orange",
+      description: "Helps enhance creativity and fortune.",
     },
     {
-      color: "#C70039",
-      name: "ชมพูเข้ม",
-      description: "ช่วยเสริมด้านความรักและเสน่ห์ส่วนตัว",
+      color: "#aa2a54",
+      name: "Deep Pink",
+      description: "Helps enhance love and personal charm.",
     },
     {
       color: "#33FF57",
-      name: "เขียวอ่อน",
-      description: "ช่วยเสริมด้านสุขภาพและความสงบในจิตใจ",
+      name: "Light Green",
+      description: "Helps enhance health and inner peace.",
     },
     {
       color: "#3357FF",
-      name: "น้ำเงิน",
-      description: "ช่วยเสริมด้านสติปัญญาและความเฉลียวฉลาด",
+      name: "Blue",
+      description: "Helps enhance wisdom and intelligence.",
     },
   ];
 
@@ -60,9 +60,11 @@ export default function DetailColorScreen() {
         <View style={styles.colorContainer}>
           {colorsOfTheDay.map((item, index) => (
             <View key={index} style={styles.colorSection}>
+              
               <View style={[styles.colorBox, { backgroundColor: item.color }]}>
                 <Text style={styles.colorName}>{item.name}</Text>
               </View>
+
               <Text style={styles.description}>{item.description}</Text>
             </View>
           ))}
@@ -78,33 +80,33 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 0,
     width: "100%",
-    height: 120,
-    backgroundColor: "#6200ea",
+    height: 100,
+    backgroundColor: "#5B3E90",
     justifyContent: "center",
     alignItems: "center",
   },
-  backButton: { position: "absolute", left: 10, top: 50, padding: 10 },
+  backButton: { position: "absolute", left: 10, justifyContent: "center", padding: 10 },
   logo: {
     color: "white",
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
-    marginTop: 50,
   },
-  mainContent: { marginTop: 140, padding: 20, backgroundColor: "#fff" },
+  mainContent: { marginTop: 100, padding: 20, backgroundColor: "#fff" },
   colorContainer: { marginTop: 20 },
   colorSection: { marginBottom: 20, alignItems: "center" },
+  
   colorBox: {
     width: "90%",
-    height: 80,
+    height: 60,
     borderRadius: 8,
     justifyContent: "center",
     alignItems: "center",
   },
-  colorName: { color: "white", fontWeight: "bold", fontSize: 18 },
+  colorName: { color: "white", fontWeight: "bold", fontSize: 14 },
   description: {
     fontSize: 14,
-    color: "gray",
+    color: "#5B3E90",
     textAlign: "center",
     marginTop: 5,
   },

@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   dateText: { fontSize: 16, fontWeight: "medium", color: "#1F2940" },
   colorContainer: { marginTop: 20 },
   colorSection: { marginBottom: 20 },
-  sectionTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
+  sectionTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 10, color: "#1F2940" },
   
   colorBoxContainer: {
     flexDirection: "row",
@@ -99,5 +99,5 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   colorName: { color: "white", fontWeight: "bold" },
-  description: { fontSize: 14, color: "gray", textAlign: "left", marginTop: 5 },
+  description: { fontSize: 14, color: "#5B3E90", textAlign: "left", marginTop: 5 },
 });
