@@ -48,11 +48,11 @@ export default function HomeScreen() {
               <View style={styles.colorBox}>
                 <Text style={styles.colorTitle}>Lucky Color</Text>
                 <View style={styles.colorBar}>
-                  <View style={[styles.colorSegment, { backgroundColor: "#008000", flex: 1 }]}>
-                    <Text style={styles.colorText}>Green</Text>
-                  </View>
                   <View style={[styles.colorSegment, { backgroundColor: "#0000FF", flex: 1 }]}>
                     <Text style={styles.colorText}>Blue</Text>
+                  </View>
+                  <View style={[styles.colorSegment, { backgroundColor: "#FFEB99", flex: 1 }]}>
+                    <Text style={styles.colorText}>Cream</Text>
                   </View>
                 </View>
               </View>
@@ -62,8 +62,8 @@ export default function HomeScreen() {
                   <View style={[styles.colorSegment, { backgroundColor: "#FF0000", flex: 1 }]}>
                     <Text style={styles.colorText}>Red</Text>
                   </View>
-                  <View style={[styles.colorSegment, { backgroundColor: "#FFC0CB", flex: 1 }]}>
-                    <Text style={styles.colorText}>Pink</Text>
+                  <View style={[styles.colorSegment, { backgroundColor: "orange", flex: 1 }]}>
+                    <Text style={styles.colorText}>Orange</Text>
                   </View>
                 </View>
               </View>
