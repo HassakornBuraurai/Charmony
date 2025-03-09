@@ -8,7 +8,6 @@ import {
   StyleSheet,
   SafeAreaView,
 } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
 
 export default function MatchColorScreen() {
   const looks = [
@@ -79,7 +78,7 @@ const styles = StyleSheet.create({
   colorContainer: { marginTop: 20 },
   colorSection: { marginBottom: 20 },
   sectionTitle: { fontSize: 18, fontWeight: "bold", marginBottom: 10 },
-  
+
   colorBoxContainer: {
     flexDirection: "row",
     justifyContent: "flex-start",
@@ -89,7 +88,7 @@ const styles = StyleSheet.create({
     padding: 10,
     width: "100%",
   },
-  
+
   colorBox: {
     flex: 1,
     height: 60,
